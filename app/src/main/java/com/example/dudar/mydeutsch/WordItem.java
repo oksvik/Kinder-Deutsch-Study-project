@@ -24,10 +24,10 @@ public class WordItem {
         mDeutschTranslation = deutTr;
     }
 
-    public WordItem (String defTr, String deutTr, int imgId){
+    public WordItem (String defTr, String deutTr, int audioId){
         mDefaultTranslation = defTr;
         mDeutschTranslation = deutTr;
-        mImageSrc = imgId;
+        mAudioSrc = audioId;
     }
 
     public WordItem (String defTr, String deutTr, int imgId, int audioId){
@@ -36,6 +36,7 @@ public class WordItem {
         mImageSrc = imgId;
         mAudioSrc = audioId;
     }
+
     /** Get default translation of the word.*/
     public String getDefaultTranslation() {
         return mDefaultTranslation;

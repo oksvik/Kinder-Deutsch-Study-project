@@ -31,17 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.colors:
                 s= "Open Colors list";
-                //Toast.makeText(this, "Open Colors list", Toast.LENGTH_SHORT).show();
                 i = new Intent(this,ColorsActivity.class);
                 break;
             case R.id.family:
                 s = "Open Family members list";
-                //Toast.makeText(this, "Open Family members list", Toast.LENGTH_SHORT).show();
                 i = new Intent(this,FamilyActivity.class);
                 break;
             case R.id.phrases:
                 s = "Open Phrases list";
-                //Toast.makeText(this, "Open Phrases list", Toast.LENGTH_SHORT).show();
                 i = new Intent(this,PhrasesActivity.class);
         }
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();

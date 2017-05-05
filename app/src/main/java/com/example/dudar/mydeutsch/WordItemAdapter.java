@@ -24,15 +24,6 @@ public class WordItemAdapter extends ArrayAdapter<WordItem> {
         mBackgroundColor = bckgrColorId;
     }
 
-    /**
-     * Provides a view for an AdapterView (ListView, GridView, etc.)
-     *
-     * @param position The position in the list of data that should be displayed in the
-     *                 list item view.
-     * @param convertView The recycled view to populate.
-     * @param parent The parent ViewGroup that is used for inflation.
-     * @return The View for the position in the AdapterView.
-     */
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -43,7 +34,7 @@ public class WordItemAdapter extends ArrayAdapter<WordItem> {
                     R.layout.list_item, parent, false);
         }
 
-        // Get the {@link AndroidFlavor} object located at this position in the list
+        // Get the WordItem object located at this position in the list
         WordItem currentWordItem = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
@@ -74,8 +65,6 @@ public class WordItemAdapter extends ArrayAdapter<WordItem> {
         View textContainer =listItemView.findViewById(R.id.text_layout);
         int color = ContextCompat.getColor(getContext(),mBackgroundColor);
         textContainer.setBackgroundColor(color);
-
-
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
